@@ -19,9 +19,9 @@ public class ConsultaLivro {
 
             while (resultSet.next()) {
                 Livro livro = new Livro();
-                livro.setId(resultSet.getInt("id"));
-                livro.setTitulo(resultSet.getString("titulo"));
-                livro.setAutor(resultSet.getString("autor"));
+                livro.setId(resultSet.getString("id_isbn"));
+                livro.setTitulo(resultSet.getString("nm_titulo"));
+                livro.setAutor(resultSet.getString("nm_autor"));
                 livro.setPreco(resultSet.getDouble("vl_preco"));
                 livrosEncontrados.add(livro);
             }
@@ -43,9 +43,9 @@ public class ConsultaLivro {
 
             while (resultSet.next()) {
                 Livro livro = new Livro();
-                livro.setId(resultSet.getInt("id"));
-                livro.setTitulo(resultSet.getString("titulo"));
-                livro.setAutor(resultSet.getString("autor"));
+                livro.setId(resultSet.getString("id_isbn"));
+                livro.setTitulo(resultSet.getString("nm_titulo"));
+                livro.setAutor(resultSet.getString("nm_autor"));
                 livro.setPreco(resultSet.getDouble("vl_preco"));
                 livrosEncontrados.add(livro);
             }
