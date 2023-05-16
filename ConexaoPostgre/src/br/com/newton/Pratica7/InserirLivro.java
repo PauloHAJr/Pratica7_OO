@@ -7,7 +7,7 @@ public class InserirLivro {
         public void inserirLivro(Livro livro) {
             String sql = "INSERT INTO Livros (titulo, autor, vl_preco) VALUES (?, ?, ?)";
 
-            try (Connection connection = ConexaoDB.getConnection();
+            try (Connection connection = ConexaoBD.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, livro.getTitulo());
                 statement.setString(2, livro.getAutor());
