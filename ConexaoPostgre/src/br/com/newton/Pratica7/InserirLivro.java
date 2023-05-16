@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 public class InserirLivro {
         public void inserirLivro(Livro livro) {
-            String sql = "INSERT INTO Livros (titulo, autor, vl_preco) VALUES (?, ?, ?)";
+            String sql = "insert into livro (nm_titulo, nm_autor, vl_preco) values (?, ?, ?)";
 
             try (Connection connection = ConexaoBD.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {

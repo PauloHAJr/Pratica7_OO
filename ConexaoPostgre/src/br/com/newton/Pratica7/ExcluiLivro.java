@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ExcluiLivro {
         public void excluirLivro(int idLivro) {
-            String sql = "DELETE FROM Livros WHERE id = ?";
+            String sql = "delete from livro where id_isbn = ?";
 
             try (Connection connection = ConexaoBD.getConnection();
                  PreparedStatement statement = connection.prepareStatement(sql)) {

@@ -10,7 +10,7 @@ import java.util.List;
 public class ConsultaLivro {
     public List<Livro> buscarLivroPorTitulo(String titulo) {
         List<Livro> livrosEncontrados = new ArrayList<>();
-        String sql = "SELECT * FROM Livros WHERE titulo LIKE ?";
+        String sql = "select * from livro where nm_titulo = ?";
 
         try (Connection connection = ConexaoBD.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -34,7 +34,7 @@ public class ConsultaLivro {
 
     public List<Livro> buscarLivroPorPreco(double precoMinimo) {
         List<Livro> livrosEncontrados = new ArrayList<>();
-        String sql = "SELECT * FROM Livros WHERE vl_preco >= ?";
+        String sql = "select * from livro where vl_preco >= ?";
 
         try (Connection connection = ConexaoBD.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
